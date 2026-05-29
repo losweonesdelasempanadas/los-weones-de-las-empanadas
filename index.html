@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empanadas Donde El Weon 🥟 | Las mejores empanadas de Buin</title>
+    <title>Los Weones de las Empanadas 🥟 | Las mejores empanadas de Buin</title>
     <meta name="description" content="Las empanadas que te hacen decir 'Weón, qué ricas!' Empanadas de Pino y Pollo Queso en Buin. Delivery sin costo en Villa Los Hidalgos.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,8 @@
         header { position: fixed; top: 0; width: 100%; background: rgba(26, 26, 26, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--naranja); }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
         .logo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--amarillo); }
+        .logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--amarillo); }
+        .logo-text span { color: var(--naranja); }
         nav ul { display: flex; gap: 24px; list-style: none; }
         nav a { color: var(--blanco); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         nav a:hover { color: var(--amarillo); }
@@ -52,10 +54,9 @@
         .section-title { text-align: center; margin-bottom: 60px; }
         .section-title h2 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 12px; color: var(--amarillo); }
         .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-        .producto-card { background: var(--negro); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); transition: all 0.4s ease; border: 2px solid transparent; }
+        .producto-card { background: var(--negro); border-radius: 20px; overflow: visible; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); transition: all 0.4s ease; border: 2px solid transparent; }
         .producto-card:hover { transform: translateY(-12px); border-color: var(--naranja); }
-        .producto-img { width: 100%; height: 250px; object-fit: cover; }
-        .producto-badge { position: absolute; top: 20px; right: 20px; background: var(--rojo); color: var(--blanco); padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.9rem; }
+        .producto-img { width: 100%; height: auto; object-fit: contain; display: block; background: var(--humo); }
         .producto-info { padding: 24px; }
         .producto-info h3 { font-size: 2rem; margin-bottom: 12px; color: var(--amarillo); }
         .producto-precio { font-size: 2rem; font-weight: 800; color: var(--naranja); margin-bottom: 20px; }
@@ -85,6 +86,7 @@
             .hero-logo { width: 140px; height: 140px; }
             .btn-group { flex-direction: column; }
             .btn { width: 100%; }
+            .logo-text { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -92,7 +94,10 @@
     <header>
         <div class="container">
             <div class="nav-wrapper">
-                <img src="logo.png" alt="Empanadas Donde El Weon" class="logo">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="logo.png" alt="Los Weones de las Empanadas" class="logo">
+                    <div class="logo-text">LOS WEONES DE LAS <span>EMPANADAS</span></div>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
@@ -113,7 +118,7 @@
             <p>Artesanales, doraditas y con el relleno que te deja loco 🥟✨</p>
             <div class="btn-group">
                 <a href="#productos" class="btn btn-primary"><i class="fas fa-fire"></i> Ver Empanadas</a>
-                <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20de%20empanadas" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20a%20Los%20Weones%20de%20las%20Empanadas" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
             </div>
         </div>
     </section>
@@ -126,10 +131,7 @@
             </div>
             <div class="productos-grid">
                 <div class="producto-card">
-                    <div style="position: relative;">
-                        <img src="empanada-de-pino.png" alt="Empanada de Pino" class="producto-img">
-                        <div class="producto-badge">🔥 Más Vendida</div>
-                    </div>
+                    <img src="empanada-de-pino.png" alt="Empanada de Pino" class="producto-img">
                     <div class="producto-info">
                         <h3>Empanada de Pino</h3>
                         <p>La clásica chilena: carne picada, cebolla, huevo duro, aceituna y pasas. Doradita por fuera, jugosa por dentro.</p>
@@ -139,10 +141,7 @@
                 </div>
 
                 <div class="producto-card">
-                    <div style="position: relative;">
-                        <img src="empanada-de-queso.png" alt="Empanada de Pollo Queso" class="producto-img">
-                        <div class="producto-badge">🧀 Cremosa</div>
-                    </div>
+                    <img src="empanada-de-queso.png" alt="Empanada de Pollo Queso" class="producto-img">
                     <div class="producto-info">
                         <h3>Empanada de Pollo Queso</h3>
                         <p>Pechuga de pollo desmenuzada con queso derretido. Cremosa, sabrosa y adictiva. La favorita de los cabros.</p>
@@ -202,11 +201,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Empanadas Donde El Weon. Todos los derechos reservados. Hecho con 🧡 en Buin.</p>
+                <p>&copy; 2026 Los Weones de las Empanadas. Todos los derechos reservados. Hecho con 🧡 en Buin.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20de%20empanadas" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20a%20Los%20Weones%20de%20las%20Empanadas" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>

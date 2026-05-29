@@ -3,71 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Weones De Las Empanadas | Las mejores empanadas de Buin</title>
-    <meta name="description" content="Las empanadas que te hacen decir 'Weón, qué rico!' Empanadas de Pino y Pollo Queso en Buin. Delivery sin costo en Villa Los Hidalgos. Haz tu pedido por WhatsApp.">
-    <meta name="keywords" content="empanadas, buin, empanadas de pino, empanadas pollo queso, comida chilena, delivery buin, villa los hidalgos">
-    <meta name="author" content="Los Weones De Las Empanadas">
-    <meta name="theme-color" content="#E85D04">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://losweonesdelasempanadas.cl/">
-    <meta property="og:title" content="Los Weones De Las Empanadas | Buin">
-    <meta property="og:description" content="Las empanadas que te hacen decir 'Weón, qué rico!' Pide las tuyas por WhatsApp.">
-    
-    <!-- Google Fonts -->
+    <title>Empanadas Donde El Weon 🥟 | Las mejores empanadas de Buin</title>
+    <meta name="description" content="Las empanadas que te hacen decir 'Weón, qué ricas!' Empanadas de Pino y Pollo Queso en Buin. Delivery sin costo en Villa Los Hidalgos.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Schema.org LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Los Weones De Las Empanadas",
-      "description": "Las empanadas que te hacen decir 'Weón, qué rico!' Empanadas artesanales de Pino y Pollo Queso en Buin.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Buin",
-        "addressRegion": "Región Metropolitana",
-        "addressCountry": "CL"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -33.7333,
-        "longitude": -70.7500
-      },
-      "telephone": "+56962119959",
-      "email": "losweonesdelasempanadas@gmail.com",
-      "servesCuisine": "Comida Chilena",
-      "priceRange": "$$",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "12:00",
-        "closes": "20:00"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+56962119959",
-          "contactType": "sales",
-          "areaServed": "CL"
-        },
-        {
-          "@type": "ContactPoint", 
-          "telephone": "+56990671803",
-          "contactType": "customer service",
-          "areaServed": "CL"
-        }
-      ]
-    }
-    </script>
-
     <style>
         :root {
             --naranja: #E85D04;
@@ -80,766 +22,157 @@
             --gris: #E5E5E5;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--negro); color: var(--blanco); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; line-height: 1.1; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        header { position: fixed; top: 0; width: 100%; background: rgba(26, 26, 26, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--naranja); }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+        .logo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--amarillo); }
+        nav ul { display: flex; gap: 24px; list-style: none; }
+        nav a { color: var(--blanco); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        nav a:hover { color: var(--amarillo); }
+        .mobile-menu { display: none; font-size: 1.5rem; color: var(--amarillo); cursor: pointer; }
+
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 20px 60px; background: radial-gradient(circle at 50% 30%, rgba(232, 93, 4, 0.2) 0%, var(--negro) 60%); }
+        .hero-logo { width: 180px; height: 180px; margin: 0 auto 24px; border-radius: 50%; border: 4px solid var(--amarillo); box-shadow: 0 0 40px rgba(255, 183, 3, 0.4); animation: float 3s ease-in-out infinite; object-fit: contain; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 16px; background: linear-gradient(135deg, var(--amarillo), var(--naranja), var(--rojo)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: clamp(1rem, 3vw, 1.3rem); color: var(--gris); margin-bottom: 32px; }
+        .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s ease; }
+        .btn-primary { background: linear-gradient(135deg, var(--naranja), var(--rojo)); color: var(--blanco); box-shadow: 0 8px 24px rgba(232, 93, 4, 0.4); }
+        .btn-primary:hover { transform: translateY(-3px); }
+        .btn-secondary { background: transparent; color: var(--amarillo); border: 2px solid var(--amarillo); }
+        .btn-secondary:hover { background: var(--amarillo); color: var(--negro); }
+
+        .productos { padding: 80px 20px; background: var(--carbon); }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 12px; color: var(--amarillo); }
+        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+        .producto-card { background: var(--negro); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); transition: all 0.4s ease; border: 2px solid transparent; }
+        .producto-card:hover { transform: translateY(-12px); border-color: var(--naranja); }
+        .producto-img { width: 100%; height: 250px; object-fit: cover; }
+        .producto-badge { position: absolute; top: 20px; right: 20px; background: var(--rojo); color: var(--blanco); padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.9rem; }
+        .producto-info { padding: 24px; }
+        .producto-info h3 { font-size: 2rem; margin-bottom: 12px; color: var(--amarillo); }
+        .producto-precio { font-size: 2rem; font-weight: 800; color: var(--naranja); margin-bottom: 20px; }
+        .btn-wsp { width: 100%; background: #25D366; color: var(--blanco); padding: 14px; border-radius: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; }
+
+        .delivery { padding: 80px 20px; background: linear-gradient(135deg, var(--negro) 0%, var(--carbon) 100%); }
+        .delivery-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .delivery-card { background: rgba(43, 43, 43, 0.6); border: 2px solid var(--humo); border-radius: 16px; padding: 32px; text-align: center; }
+        .delivery-card:hover { border-color: var(--naranja); transform: translateY(-8px); }
+        .delivery-icon { font-size: 3rem; color: var(--amarillo); margin-bottom: 16px; }
+        .delivery-card h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--naranja); }
+
+        footer { background: var(--negro); border-top: 3px solid var(--naranja); padding: 60px 20px 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h3 { font-size: 1.5rem; color: var(--amarillo); margin-bottom: 16px; }
+        .footer-col a { color: var(--gris); text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-col a:hover { color: var(--naranja); }
+        .footer-logo { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--amarillo); margin-bottom: 16px; object-fit: contain; }
+        .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid var(--humo); color: var(--gris); font-size: 0.9rem; }
+
+        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--blanco); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); z-index: 999; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.8); transform: scale(1.05); } }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--negro);
-            color: var(--blanco);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 1px;
-            line-height: 1.1;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 2px solid var(--naranja);
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 4px 20px rgba(232, 93, 4, 0.3);
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--amarillo);
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: rotate(10deg) scale(1.1);
-        }
-
-        nav ul {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
-
-        nav a {
-            color: var(--blanco);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--amarillo);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--amarillo);
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            color: var(--amarillo);
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 20px 60px;
-            background: radial-gradient(circle at 50% 30%, rgba(232, 93, 4, 0.2) 0%, var(--negro) 60%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255, 183, 3, 0.03) 10px,
-                rgba(255, 183, 3, 0.03) 20px
-            );
-            animation: movePattern 20s linear infinite;
-        }
-
-        @keyframes movePattern {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-logo {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 24px;
-            border-radius: 50%;
-            border: 4px solid var(--amarillo);
-            box-shadow: 0 0 40px rgba(255, 183, 3, 0.4);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--amarillo), var(--naranja), var(--rojo));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(232, 93, 4, 0.5);
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 3vw, 1.3rem);
-            color: var(--gris);
-            margin-bottom: 32px;
-            font-weight: 300;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--naranja), var(--rojo));
-            color: var(--blanco);
-            box-shadow: 0 8px 24px rgba(232, 93, 4, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(232, 93, 4, 0.6);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--amarillo);
-            border: 2px solid var(--amarillo);
-        }
-
-        .btn-secondary:hover {
-            background: var(--amarillo);
-            color: var(--negro);
-            transform: translateY(-3px);
-        }
-
-        /* Productos Section */
-        .productos {
-            padding: 80px 20px;
-            background: var(--carbon);
-            position: relative;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            margin-bottom: 12px;
-            color: var(--amarillo);
-        }
-
-        .section-title p {
-            color: var(--gris);
-            font-size: 1.1rem;
-        }
-
-        .productos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .producto-card {
-            background: var(--negro);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid transparent;
-            position: relative;
-        }
-
-        .producto-card:hover {
-            transform: translateY(-12px);
-            border-color: var(--naranja);
-            box-shadow: 0 20px 60px rgba(232, 93, 4, 0.4);
-        }
-
-        .producto-img-wrapper {
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 1/1;
-            background: var(--negro);
-            padding: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .producto-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.6s ease;
-        }
-
-        .producto-card:hover .producto-img {
-            transform: scale(1.05);
-        }
-
-        /* Efecto humo/calor */
-        .steam {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .producto-card:hover .steam {
-            opacity: 1;
-        }
-
-        .steam::before,
-        .steam::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: steam 3s ease-in-out infinite;
-        }
-
-        .steam::after {
-            animation-delay: 1.5s;
-        }
-
-        @keyframes steam {
-            0% {
-                transform: translateY(0) scale(0.5);
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100px) scale(2);
-                opacity: 0;
-            }
-        }
-
-        .producto-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--rojo);
-            color: var(--blanco);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 12px rgba(208, 0, 0, 0.5);
-            z-index: 3;
-        }
-
-        .producto-info {
-            padding: 24px;
-        }
-
-        .producto-info h3 {
-            font-size: 2rem;
-            margin-bottom: 12px;
-            color: var(--amarillo);
-        }
-
-        .producto-info p {
-            color: var(--gris);
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-
-        .producto-precio {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--naranja);
-            margin-bottom: 20px;
-        }
-
-        .btn-wsp {
-            width: 100%;
-            background: #25D366;
-            color: var(--blanco);
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-wsp:hover {
-            background: #1ebe5d;
-            transform: scale(1.02);
-        }
-
-        /* Delivery Section */
-        .delivery {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, var(--negro) 0%, var(--carbon) 100%);
-        }
-
-        .delivery-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .delivery-card {
-            background: rgba(43, 43, 43, 0.6);
-            backdrop-filter: blur(10px);
-            border: 2px solid var(--humo);
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .delivery-card:hover {
-            border-color: var(--naranja);
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(232, 93, 4, 0.3);
-        }
-
-        .delivery-icon {
-            font-size: 3rem;
-            color: var(--amarillo);
-            margin-bottom: 16px;
-        }
-
-        .delivery-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            color: var(--naranja);
-        }
-
-        .delivery-card p {
-            color: var(--gris);
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--negro);
-            border-top: 3px solid var(--naranja);
-            padding: 60px 20px 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.5rem;
-            color: var(--amarillo);
-            margin-bottom: 16px;
-        }
-
-        .footer-col p, .footer-col a {
-            color: var(--gris);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 8px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col a:hover {
-            color: var(--naranja);
-        }
-
-        .footer-logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid var(--amarillo);
-            margin-bottom: 16px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--carbon);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--naranja);
-            transform: translateY(-5px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 24px;
-            border-top: 1px solid var(--humo);
-            color: var(--gris);
-            font-size: 0.9rem;
-        }
-
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--blanco);
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
-            z-index: 999;
-            animation: pulse 2s infinite;
-            transition: all 0.3s ease;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
-            }
-            50% {
-                box-shadow: 0 8px 32px rgba(37, 211, 102, 0.8);
-                transform: scale(1.05);
-            }
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            animation: none;
-        }
-
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            nav ul {
-                position: fixed;
-                top: 84px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 84px);
-                background: rgba(26, 26, 26, 0.98);
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 40px;
-                gap: 32px;
-                transition: left 0.3s ease;
-            }
-
-            nav ul.active {
-                left: 0;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero {
-                padding: 100px 20px 40px;
-            }
-
-            .hero-logo {
-                width: 140px;
-                height: 140px;
-            }
-
-            .btn-group {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .productos-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .delivery-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            nav ul { display: none; }
+            .mobile-menu { display: block; }
+            .hero-logo { width: 140px; height: 140px; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
+    <header>
         <div class="container">
             <div class="nav-wrapper">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVCBQVFhUXFxUYFRcXFxgYGBUYGhgVFhYZHSggGBolGxUXITEiJikrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFS0dHyUiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAAIAAwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECBQYDB//EAD4QAAIBAgMDBgMHBgMBAQAAAAABAgMRBBIhMQVBUWEicYEHEzKRobHB0fAz8CQzYhUkQ1Jy4fEV/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAHREAAgICAwEAAAAAAAAAAAAAAAECERIhMSFB/9oADAMBAAIRAxEAPwD0/jYBrU2zlSvYnAWlvQxt1/5/0Mprn6JNO1dRXNc/Zq9NoPQo/oKNU3Qes1dlb9P9G0kt3v9QXjSuWbOqUBR1wNxj/ADH2SJkpvA39po0rDBkbz53mRRaoA0AA0AOmgqMxfa2oUPJ27PdxqKtN0HgOgO00peNmoBTzObmy9TVldVUqtiVba2k", alt="Los Weones De Las Empanadas" class="logo">
+                <img src="logo.png" alt="Empanadas Donde El Weon" class="logo">
                 <nav>
-                    <ul id="nav-menu">
+                    <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#productos">Empanadas</a></li>
                         <li><a href="#delivery">Delivery</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>
-                <div class="mobile-menu" id="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="mobile-menu"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVCBQVFhUXFxUYFRcXFxgYGBUYGhgVFhYZHSggGBolGxUXITEiJikrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFS0dHyUiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAAIAAwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECBQYDB//EAD4QAAIBAgMDBgMHBgMBAQAAAAABAgMRBBIhMQVBUWEicYEHEzKRobHB0fAz8CQzYhUkQ1Jy4fEV/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAHREAAgICAwEAAAAAAAAAAAAAAAECERIhMSFB/9oADAMBAAIRAxEAPwD0/jYBrU2zlSvYnAWlvQxt1/5/0Mprn6JNO1dRXNc/Zq9NoPQo/oKNU3Qes1dlb9P9G0kt3v9QXjSuWbOqUBR1wNxj/ADH2SJkpvA39po0rDBkbz53mRRaoA0AA0AOmgqMxfa2oUPJ27PdxqKtN0HgOgO00peNmoBTzObmy9TVldVUqtiVba2k" alt="Logo" class="hero-logo">
+            <img src="logo.png" alt="Logo" class="hero-logo">
             <h1>Las empanadas que te hacen decir<br>'Weón, qué ricas!'</h1>
             <p>Artesanales, doraditas y con el relleno que te deja loco 🥟✨</p>
             <div class="btn-group">
-                <a href="#productos" class="btn btn-primary">
-                    <i class="fas fa-fire"></i> Ver Empanadas
-                </a>
-                <a href="https://wa.me/56962119959?text=Hola%20%F0%9F%91%8B%20Quiero%20hacer%20un%20pedido%20de%20empanadas%20%F0%9F%A5%9F%20%E2%80%A2%20Pino%3A%20%E2%80%A2%20Pollo%20Queso%3A%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
-                </a>
+                <a href="#productos" class="btn btn-primary"><i class="fas fa-fire"></i> Ver Empanadas</a>
+                <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20de%20empanadas" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <!-- Productos Section -->
     <section class="productos" id="productos">
         <div class="container">
-            <div class="section-title reveal">
+            <div class="section-title">
                 <h2>Nuestras Empanadas</h2>
                 <p>Recién horneadas, con ingredientes frescos y el sazón de la casa</p>
             </div>
-
             <div class="productos-grid">
-                <!-- Empanada Pino -->
-                <div class="producto-card reveal">
-                    <div class="producto-img-wrapper">
-                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVCBQVFhUXFxUYFxgYGBgXGBgYGBgXGhgVFhgYHSggGBolGxUXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFy0dHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBQYDB//EAEQQAAEDAgMGBgMFAQAAAAAAAAECAxEABBEFEiExQQYTIlFhcYGREzKh8CNCobHwFBViMzQ1Q1SS/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAHBEAAgMAAwEAAAAAAAAAAAAAAQIAEQQhMSIx/9oADAMBAAIRAxEAPwD1IQAAAAAAAAAAAAAAAAAAAARY1Q6HdmGHtnF11WnpvUk341mJVUpxDZWdHTZAfMXa4dWDLctvt0XZ2sBoqEogQAtWI6WUZDU2vQZL0XKZLV1nWceqe22/ANwmpyVPdNNy3O7UqKl6que62t9VjIrJzJY0TYjy3JUt9Jq8V7YVJiWG6x1N5o+IP/sb60dsrksHeozPAZ9+k+mcUxu2yA/7jPRj5kcf6/JZVJBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXJ5RNjdhXFRXY3V6ehrUSYjMEic8U6nCeL1YNk7FNP+AU3LLtgkkq7xwhWIvdlfWpKquSPdVVHDDDlLcdUUZLQ5+ya2iYAAAAAAhAAAAAAAAAEAAAAAAAAAqKBTVu9iLx8hUoSyszceI8E9zJb+J7qmlLcJFrMTl8n6lEnWElmlLaLWquiaZDz2tuLtaqXHFk7KF7ugnPvX5CLLNxoK9Fo/tPCR63o4nef2S2mm1ZY7O59KG14UaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAFSksEVlatWR1lFM7b6aHHYYZetPlaNnDdV22MAknb67UhfiSwFi+5a9FnzU0HYd/wBDZ/9L9qX/ALYfCGn4KjMeCLZ2NrD/uQSa7PVV3b7GrR1mm0q9ROq/qITzUTSt3Tulb9kK1I2RN2nCDGVr8wveN/wJWW2Sw0VhvhhIhD+q519p6COw5XDyYXz9svsOJhUXhRdbp/N+rZl0AAAAAAAAAAAA==" alt="Empanada de Pino" class="producto-img">
-                        <div class="steam"></div>
+                <div class="producto-card">
+                    <div style="position: relative;">
+                        <img src="empanada-de-pino.png" alt="Empanada de Pino" class="producto-img">
                         <div class="producto-badge">🔥 Más Vendida</div>
                     </div>
                     <div class="producto-info">
                         <h3>Empanada de Pino</h3>
                         <p>La clásica chilena: carne picada, cebolla, huevo duro, aceituna y pasas. Doradita por fuera, jugosa por dentro.</p>
                         <div class="producto-precio">$2.500</div>
-                        <a href="https://wa.me/56962119959?text=Hola%20%F0%9F%91%8B%20Quiero%20empanadas%20de%20Pino%20%F0%9F%A5%9F%20%C2%BFCu%C3%A1ntas%20tienen%20disponibles%3F" target="_blank" class="btn btn-wsp">
-                            <i class="fab fa-whatsapp"></i> Pedir Ahora
-                        </a>
+                        <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20empanadas%20de%20Pino" target="_blank" class="btn-wsp"><i class="fab fa-whatsapp"></i> Pedir Ahora</a>
                     </div>
                 </div>
 
-                <!-- Empanada Pollo Queso -->
-                <div class="producto-card reveal">
-                    <div class="producto-img-wrapper">
-                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVFhUXFxUYGBcXFxcXFxcYHBcXFxYWFhgYHSggGBolGxUXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGiwkHyQtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABEEAABAwIEAwUCBQMDAwAAAAAAAQIDBAURBRIhMRMiQVEiYYGRFDKBkaEjQnKx0fAUQoLh8RY0/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAHREAAgMAAwEAAAAAAAAAAAAAAQIAERJBABIT/9oADAMBAAIRAxEAPwD1oEQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJmlxGk6nKNM93uLGWvCLzQCmeGVjkDVVdY7MVrBW3C1k/4x/LjfxqsZNjvUhOeqfz6h4pg5NHuovi1YL2Iu1BHYuJ12gOE7aQnNvRWk+qbHhU63TbWE783EzPXjmZbymnpaMcXqlpvxslcxRbk80YY6hYnPIc8ypU7ssrwiBUcst2wpa4cO8iOK5t5RG66nXeLvGae4YvmXm458f0cegAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQowVPRcNqorJ0xiBqttmwuEEOwxM2vrxZqxNCXyc5Ce6nIWRRB8bab55+cI5w9SU5es0rNEssypYq6bY3DYte0IFXCY+/7Rf0zIzHoqVLrjwcN2tnTbAU8e6Y5DPl5XTEf8smiSUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaBGTVLZlVplTFk3ZGsdlMRy02ep0YeKmXLdvcs9MvjWPtdFrPT+tqPzAvTfvH0sHcd5x+JR36b0bOff5JQkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO" alt="Empanada de Pollo Queso" class="producto-img">
-                        <div class="steam"></div>
+                <div class="producto-card">
+                    <div style="position: relative;">
+                        <img src="empanada-de-queso.png" alt="Empanada de Pollo Queso" class="producto-img">
                         <div class="producto-badge">🧀 Cremosa</div>
                     </div>
                     <div class="producto-info">
                         <h3>Empanada de Pollo Queso</h3>
                         <p>Pechuga de pollo desmenuzada con queso derretido. Cremosa, sabrosa y adictiva. La favorita de los cabros.</p>
                         <div class="producto-precio">$2.500</div>
-                        <a href="https://wa.me/56962119959?text=Hola%20%F0%9F%91%8B%20Quiero%20empanadas%20de%20Pollo%20Queso%20%F0%9F%A5%9F%20%C2%BFCu%C3%A1ntas%20tienen%20disponibles%3F" target="_blank" class="btn btn-wsp">
-                            <i class="fab fa-whatsapp"></i> Pedir Ahora
-                        </a>
+                        <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20empanadas%20de%20Pollo%20Queso" target="_blank" class="btn-wsp"><i class="fab fa-whatsapp"></i> Pedir Ahora</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Delivery Section -->
     <section class="delivery" id="delivery">
         <div class="container">
-            <div class="section-title reveal">
+            <div class="section-title">
                 <h2>Delivery & Horarios</h2>
                 <p>Te llevamos las empanadas calientitas a tu casa</p>
             </div>
-
             <div class="delivery-cards">
-                <div class="delivery-card reveal">
-                    <div class="delivery-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon"><i class="fas fa-clock"></i></div>
                     <h3>Horario</h3>
                     <p>De 12:00 hasta agotar stock del día<br>¡Llega temprano porque vuelan!</p>
                 </div>
-
-                <div class="delivery-card reveal">
-                    <div class="delivery-icon">
-                        <i class="fas fa-motorcycle"></i>
-                    </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon"><i class="fas fa-motorcycle"></i></div>
                     <h3>Delivery Gratis</h3>
                     <p>Sin costo en Villa Los Hidalgos<br>Comuna de Buin</p>
                 </div>
-
-                <div class="delivery-card reveal">
-                    <div class="delivery-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>Otras Zonas</h3>
                     <p>Fuera de Los Hidalgos: $500 despacho<br>Cobertura en toda la comuna de Buin</p>
                 </div>
@@ -847,119 +180,33 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVCBQVFhUXFxUYFRcXFxgYGBUYGhgVFhYZHSggGBolGxUXITEiJikrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFS0dHyUiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAAIAAwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECBQYDB//EAD4QAAIBAgMDBgMHBgMBAQAAAAABAgMRBBIhMQVBUWEicYEHEzKRobHB0fAz8CQzYhUkQ1Jy4fEV/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAHREAAgICAwEAAAAAAAAAAAAAAAECERIhMSFB/9oADAMBAAIRAxEAPwD0/jYBrU2zlSvYnAWlvQxt1/5/0Mprn6JNO1dRXNc/Zq9NoPQo/oKNU3Qes1dlb9P9G0kt3v9QXjSuWbOqUBR1wNxj/ADH2SJkpvA39po0rDBkbz53mRRaoA0AA0AOmgqMxfa2oUPJ27PdxqKtN0HgOgO00peNmoBTzObmy9TVldVUqtiVba2k" alt="Logo" class="footer-logo">
+                    <img src="logo.png" alt="Logo" class="footer-logo">
                     <p>Las empanadas más wenonas de Buin. Hechas con cariño y el sazón que te hace volver por más.</p>
-                    <div class="social-links">
-                        <a href="https://wa.me/56990671803?text=Hola%2C%20tengo%20una%20consulta%20sobre%20las%20empanadas" target="_blank" aria-label="WhatsApp Consultas">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
                 </div>
-
                 <div class="footer-col">
                     <h3>Contacto</h3>
-                    <a href="https://wa.me/56962119959?text=Hola%20%F0%9F%91%8B%20Quiero%20hacer%20un%20pedido%20de%20empanadas%20%F0%9F%A5%9F" target="_blank">
-                        <i class="fas fa-shopping-cart"></i> Pedidos: +56 9 6211 9959
-                    </a>
-                    <a href="https://wa.me/56990671803?text=Hola%2C%20tengo%20una%20consulta%20sobre%20las%20empanadas" target="_blank" style="margin-top: 12px;">
-                        <i class="fas fa-phone-alt"></i> Consultas: +56 9 9067 1803
-                    </a>
-                    <a href="mailto:losweonesdelasempanadas@gmail.com">
-                        <i class="fas fa-envelope"></i> losweonesdelasempanadas@gmail.com
-                    </a>
+                    <a href="https://wa.me/56962119959" target="_blank"><i class="fas fa-shopping-cart"></i> Pedidos: +56 9 6211 9959</a>
+                    <a href="https://wa.me/56990671803" target="_blank"><i class="fas fa-phone-alt"></i> Consultas: +56 9 9067 1803</a>
+                    <a href="mailto:losweonesdelasempanadas@gmail.com"><i class="fas fa-envelope"></i> losweonesdelasempanadas@gmail.com</a>
                     <p><i class="fas fa-location-dot"></i> Buin, Región Metropolitana</p>
                 </div>
-
                 <div class="footer-col">
                     <h3>Enlaces</h3>
                     <a href="#inicio">Inicio</a>
                     <a href="#productos">Empanadas</a>
                     <a href="#delivery">Delivery</a>
-                    <a href="https://wa.me/56962119959?text=Hola%20%F0%9F%91%8B%20Quiero%20hacer%20un%20pedido%20de%20empanadas%20%F0%9F%A5%9F%20%E2%80%A2%20Pino%3A%20%E2%80%A2%20Pollo%20Queso%3A%20%C2%BFTienen%20disponibilidad%3F" target="_blank">Hacer Pedido</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2024 Los Weones De Las Empanadas. Todos los derechos reservados. Hecho con 🧡 en Buin.</p>
+                <p>&copy; 2026 Empanadas Donde El Weon. Todos los derechos reservados. Hecho con 🧡 en Buin.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/56962119959?text=Hola%20%F0%9F%91%8B%20Quiero%20hacer%20un%20pedido%20de%20empanadas%20%F0%9F%A5%9F%20%E2%80%A2%20Pino%3A%20%E2%80%A2%20Pollo%20Queso%3A%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="whatsapp-float" aria-label="WhatsApp Pedidos">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('nav-menu');
-        
-        mobileMenu.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileMenu.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('#nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenu.querySelector('i').classList.replace('fa-times', 'fa-bars');
-            });
-        });
-
-        // Header scroll effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Scroll Reveal Animation
-        const reveals = document.querySelectorAll('.reveal');
-        
-        const revealOnScroll = () => {
-            reveals.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('active');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+    <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20de%20empanadas" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>

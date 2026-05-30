@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Weones de las Empanadas 🥟 | Las mejores empanadas de Buin</title>
-    <meta name="description" content="Las empanadas que te hacen decir 'Weón, qué ricas!' Empanadas de Pino y Pollo Queso en Buin. Delivery sin costo en Villa Los Hidalgos.">
+    <meta name="description" content="Las empanadas que te hacen decir 'Weón, qué rico!' Empanadas de Pino y Pollo Queso en Buin. Delivery sin costo en Villa Los Hidalgos.">
+    
+    <!-- FAVICON LOS WEONES DE LAS EMPANADAS -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#E85D04">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -36,7 +44,40 @@
         nav ul { display: flex; gap: 24px; list-style: none; }
         nav a { color: var(--blanco); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         nav a:hover { color: var(--amarillo); }
-        .mobile-menu { display: none; font-size: 1.5rem; color: var(--amarillo); cursor: pointer; }
+        .mobile-menu { display: none; font-size: 1.5rem; color: var(--amarillo); cursor: pointer; background: none; border: none; }
+
+        /* MENÚ MÓVIL */
+        .mobile-nav { 
+            display: none; 
+            position: fixed; 
+            top: 84px; 
+            left: 0; 
+            width: 100%; 
+            background: rgba(26, 26, 26, 0.98); 
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--naranja);
+            padding: 20px 0;
+            z-index: 999;
+        }
+        .mobile-nav.active { display: block; }
+        .mobile-nav ul { 
+            list-style: none; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 0; 
+            padding: 0 20px;
+        }
+        .mobile-nav a { 
+            color: var(--blanco); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1.1rem;
+            padding: 16px 0;
+            display: block;
+            border-bottom: 1px solid var(--humo);
+        }
+        .mobile-nav a:hover { color: var(--amarillo); }
+        .mobile-nav li:last-child a { border-bottom: none; }
 
         .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 20px 60px; background: radial-gradient(circle at 50% 30%, rgba(232, 93, 4, 0.2) 0%, var(--negro) 60%); }
         .hero-logo { width: 180px; height: 180px; margin: 0 auto 24px; border-radius: 50%; border: 4px solid var(--amarillo); box-shadow: 0 0 40px rgba(255, 183, 3, 0.4); animation: float 3s ease-in-out infinite; object-fit: contain; }
@@ -77,7 +118,7 @@
         .footer-logo { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--amarillo); margin-bottom: 16px; object-fit: contain; }
         .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid var(--humo); color: var(--gris); font-size: 0.9rem; }
 
-        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--blanco); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); z-index: 999; animation: pulse 2s infinite; }
+        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--blanco); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); z-index: 998; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5); } 50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.8); transform: scale(1.05); } }
 
         @media (max-width: 768px) {
@@ -106,9 +147,18 @@
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>
-                <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+                <button class="mobile-menu" id="menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
+        <!-- MENÚ MÓVIL -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Empanadas</a></li>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero" id="inicio">
@@ -207,5 +257,35 @@
     </footer>
 
     <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20a%20Los%20Weones%20de%20las%20Empanadas" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- JAVASCRIPT MENÚ MÓVIL -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        const menuIcon = menuBtn.querySelector('i');
+
+        // Abrir/cerrar menú
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            // Cambia el ícono de hamburguesa a X
+            if (mobileNav.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar menú al hacer click en un link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
 </body>
 </html>

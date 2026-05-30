@@ -13,6 +13,22 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#E85D04">
     
+    <!-- OPEN GRAPH PA' WHATSAPP - YA CON TU DOMINIO 👇 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.emporiodonnino.store/">
+    <meta property="og:title" content="Los Weones de las Empanadas 🥟">
+    <meta property="og:description" content="Las empanadas más wenonas de Buin. Pino y Pollo Queso recién horneadas. Delivery gratis en Villa Los Hidalgos.">
+    <meta property="og:image" content="https://www.emporiodonnino.store/logo.png">
+    <meta property="og:image:width" content="1254">
+    <meta property="og:image:height" content="1254">
+    <meta property="og:image:alt" content="Logo Los Weones de las Empanadas">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Los Weones de las Empanadas 🥟">
+    <meta name="twitter:description" content="Las empanadas más wenonas de Buin. Delivery gratis.">
+    <meta name="twitter:image" content="https://www.emporiodonnino.store/logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -46,7 +62,6 @@
         nav a:hover { color: var(--amarillo); }
         .mobile-menu { display: none; font-size: 1.5rem; color: var(--amarillo); cursor: pointer; background: none; border: none; }
 
-        /* MENÚ MÓVIL */
         .mobile-nav { 
             display: none; 
             position: fixed; 
@@ -150,7 +165,6 @@
                 <button class="mobile-menu" id="menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
-        <!-- MENÚ MÓVIL -->
         <nav class="mobile-nav" id="mobile-nav">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -258,17 +272,14 @@
 
     <a href="https://wa.me/56962119959?text=Hola%20👋%20Quiero%20hacer%20un%20pedido%20a%20Los%20Weones%20de%20las%20Empanadas" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- JAVASCRIPT MENÚ MÓVIL -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileNav = document.getElementById('mobile-nav');
         const mobileLinks = document.querySelectorAll('.mobile-nav a');
         const menuIcon = menuBtn.querySelector('i');
 
-        // Abrir/cerrar menú
         menuBtn.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
-            // Cambia el ícono de hamburguesa a X
             if (mobileNav.classList.contains('active')) {
                 menuIcon.classList.remove('fa-bars');
                 menuIcon.classList.add('fa-xmark');
@@ -278,7 +289,6 @@
             }
         });
 
-        // Cerrar menú al hacer click en un link
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
